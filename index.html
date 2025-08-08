@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+       <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Narayani</title>
+
+    <!-- aos css cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- google fonts cdn link  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;500&family=Roboto:wght@100;300;400;500&display=swap"
+    rel="stylesheet">
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="icon" href="channels4_profile.jpg" type="image/png">
+    <!-- custom css file link  -->=
+    <link rel="stylesheet" href="drink.css">
+  </head>
+
+  <body>
+<script>
+$(document).ready(function(){
+
+    $('#menu-bar').click(function(){
+        $(this).toggleClass('fa-times');
+        $('.navbar').toggleClass('nav-toggle');
+    });
+
+    $(window).on('load scroll',function(){
+
+        $('#menu-bar').removeClass('fa-times');
+        $('.navbar').removeClass('nav-toggle');
+
+        $('section').each(function(){
+
+            let top = $(window).scrollTop();
+            let height = $(this).height();
+            let id = $(this).attr('id');
+            let offset = $(this).offset().top - 200;
+
+            if(top > offset && top < offset + height){
+                $('.navbar ul li a').removeClass('active');
+                $('.navbar').find(`[href="#${id}"]`).addClass('active');
+            }
+
+        });
+
+    });
+
+    $('.list .btn').click(function(){
+        $(this).addClass('active').siblings().removeClass('active');
+        let src = $(this).attr('data-src');
+        $('.menu .row .image img').attr('src',src);
+    });
+
+});
+</script>
+    <!-- header section starts  -->
+
+    <header>
+
+      <a href="#" class="logo">
+        <img src="channels4_profile.jpg" alt="image missing">
+      </a>
+
+      <div id="menu-bar" class="fas fa-hamburger"></div>
+
+           <nav class="navbar">
+        <ul>
+          <li><a class="active" href="#home">Home</a>
+          </li>
+          <li><a href="#popular">My classes</a>
+          </li>
+         
+
+          </li>
+        </ul>
+      </nav>
+
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- home section starts  -->
+
+    <section class="home" id="home">
+
+      <div class="content" data-aos="fade-right">
+        <h3>Hey, Myself Nandu</h3>
+       <p>I am a Professor.
+           I'm particularly interested in this opportunity<br/>
+            because sharing the  my knowledge.<br/>
+             I'm confident that <br/> 
+             my teaching skills that<br/> will 
+             added advantage of 
+          valuable <br/>to your team. I'm excited <br/>about the 
+          prospect of contributing <br/>to your company's success. 
+          Thank you for your time </p>
+          <a href="https://www.youtube.com/watch?v=BVLvkz7_xWM&list=PL5CqlNNHaqGMl3AtWIu1MwuZuhXkeGuxP">
+          <button class="btn">get all My classes </button>
+        </a>
+      </div>
+
+      <div class="image" data-aos="fade-up">
+        <img src="Screenshot 2025-08-07 213828.png" alt="image missing">
+      </div>
+
+    </section>
+
+    <!-- home section ends -->
+
+
+
+
+
+<!-- popular section starts  -->
+
+    <section class="popular" id="popular">
+
+      <h1 class="heading"> My
+        <span>Subject</span> classes </h1>
+
+      <div class="box-container">
+
+        <div class="box" data-aos="fade-right">
+          <img src="WhatsApp Image 2025-08-08 at 7.08.22 AM.jpeg" alt="image missing">
+          <h3>Botany</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        
+          <a href="https://www.youtube.com/watch?v=BVLvkz7_xWM&list=PL5CqlNNHaqGMl3AtWIu1MwuZuhXkeGuxP">
+            <button class="btn">Watch Botany classes</button>
+          </a>
+        </div>
+
+        <div class="box" data-aos="fade-left">
+          <img src="WhatsApp Image 2025-08-08 at 7.08.23 AM (1).jpeg" alt="image missing">
+          <h3>Physics</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          
+          <a href="https://www.youtube.com/watch?v=-H3oMmram8w&list=PL5CqlNNHaqGOpmCfJNM5v_nlffE8LjI5Z">
+            <button class="btn">Watch Physics classes</button>
+          </a>
+        </div>
+
+        <div class="box" data-aos="fade-right">
+          <img src="WhatsApp Image 2025-08-08 at 7.08.23 AM.jpeg" alt="image missing">
+          <h3>Zoology</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          
+          <a href="https://www.youtube.com/watch?v=-H3oMmram8w&list=PL5CqlNNHaqGNnkdCz2TNTgPCLJPZrW9Ky">
+            <button class="btn">Watch zoology classes</button>
+          </a>
+        </div>
+
+        
+
+      </div>
+
+    </section>
+
+    <!-- gallery section ends -->
+
+
+
+ <!-- footer section starts  -->
+
+    <div class="footer">
+
+      <div class="box-container">
+
+        <div class="box">
+          <h3>contact info</h3>
+          <p> <i class="fas fa-map-marker-alt"></i> Hyderabad </p>
+          <p> <i class="fas fa-envelope"></i> nandini283261@gmail.com</p>
+         
+        </div>
+
+        <div class="box">
+          <h3>branch location</h3>
+          
+          <a href="#">Hyderabad</a>
+          
+        </div>
+
+        <div class="box">
+          <h3>quick links </h3>
+          <a href="#home">Home</a>
+          <a href="#about">About me</a>
+          
+        </div>
+
+        <div class="box">
+          <h3>follow us</h3>
+          <a href="https://www.youtube.com/@Neetworld-2025/playlists">Youtube</a>
+        </div>
+</div>
+</div>
+     
+
+    <!-- footer section ends -->
+
+
+
+
+
+    <!-- aos js cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- jquery cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script>$(document).ready(function(){
+    
+    $('#menu-bar').click(function(){
+    $(this).toggleClass('fa-times');
+    $('.navbar').toggleClass('nav-toggle');
+    });
+    
+    $(window).on('load scroll',function(){
+    
+    $('#menu-bar').removeClass('fa-times');
+    $('.navbar').removeClass('nav-toggle');
+    
+    $('section').each(function(){
+    
+    let top = $(window).scrollTop();
+    let height = $(this).height();
+    let id = $(this).attr('id');
+    let offset = $(this).offset().top - 200;
+    
+    if(top > offset && top < offset + height){
+    $('.navbar ul li a').removeClass('active');
+    $('.navbar').find(`[href="#${id}"]`).addClass('active');
+    }
+    
+    });
+    
+    });
+    
+    $('.list .btn').click(function(){
+    $(this).addClass('active').siblings().removeClass('active');
+    let src = $(this).attr('data-src');
+    $('.menu .row .image img').attr('src',src);
+    });
+    
+    });</script>
+
+    <!-- initializing aos -->
+
+    <script>
+      AOS.init(
+      {
+        delay: 400,
+        duration: 1000
+      })
+    </script>
+
+  </body>
+
+</html>
